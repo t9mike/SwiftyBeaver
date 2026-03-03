@@ -98,19 +98,19 @@ open class ConsoleDestination: BaseDestination {
             let logger = Logger(subsystem: subsystem, category: category)
             switch level {
             case .verbose:
-                logger.trace("\(message)")
+                logger.trace("\(message, privacy: .public)")
             case .debug:
-                logger.debug("\(message)")
+                logger.debug("\(message, privacy: .public)")
             case .info:
-                logger.info("\(message)")
+                logger.info("\(message, privacy: .public)")
             case .warning:
-                logger.warning("\(message)")
+                logger.warning("\(message, privacy: .public)")
             case .error:
-                logger.error("\(message)")
+                logger.error("\(message, privacy: .public)")
             case .critical:
-                logger.critical("\(message)")
+                logger.critical("\(message, privacy: .public)")
             case .fault:
-                logger.fault("\(message)")
+                logger.fault("\(message, privacy: .public)")
             }
         } else {
             _print(message: message)
